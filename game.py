@@ -29,7 +29,7 @@ def start_game(event):
                        "DodgerBlue4", "wheat2", "RosyBrown2", "bisque3", "DarkSeaGreen1"]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
-        paddle = Paddle(canvas, "blue")
+        paddle = Paddle(canvas, "Red")
         bricks = []
         for i in range(0, 5):
             b = []
@@ -92,7 +92,8 @@ def start_game(event):
                 root.update()
 
 # Initial text in screen (x,y), and Start Button
-root.bind_all("<Return>", start_game)
+root.bind_all("<Left>", start_game)
+root.bind_all("<Right>", start_game)
 canvas.create_text(250, 250, text="Press Enter to start Game!!", fill="red", font="Consolas 18")
 root.mainloop()
         
